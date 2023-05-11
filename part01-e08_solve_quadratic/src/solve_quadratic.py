@@ -3,11 +3,12 @@
 import math
 
 def solve_quadratic(a, b, c):
-    return (0,0)
-
+    plus = (-b + math.sqrt((b**2)- 4 * a * c)) / (2 * a)
+    minus = (-b - math.sqrt((b**2)- 4 * a * c)) / (2 * a)
+    return plus, minus
 
 def main():
-    pass
+    print(solve_quadratic(1, -3, 2))
 
 if __name__ == "__main__":
     main()

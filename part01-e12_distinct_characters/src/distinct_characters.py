@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 
 def distinct_characters(L):
-    return {}
+    d={}
+    for string in L:
+        s=string
+        d[string]=len(set(s))
+    return d
 
 def main():
     print(distinct_characters(["check", "look", "try", "pop"]))
