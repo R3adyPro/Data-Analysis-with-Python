@@ -4,12 +4,13 @@ import re
 
 def word_frequencies(filename="src/alice.txt"):
     f = open(filename, "r")
-    read = f.read().lower()
     d = {}
-    match = re.findall(r'\b[a-z]+\b', read)
-    for word in match:
-        count = d.get(word, 0)
-        d[word] = count +1
+
+    for i, line in enumerate(f):
+        splitted = line.split()
+        for word in splitted:
+            count = d.get(word.strip("""!"#$%&'()*,-./:;?@[]_"""), 0)
+            d[word.strip("""!"#$%&'()*,-./:;?@[]_""")] = count +1
         
     return d
 

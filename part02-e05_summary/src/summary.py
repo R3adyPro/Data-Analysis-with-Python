@@ -11,9 +11,9 @@ def tes(file):
         print(num)
     return sum
     
-def summary(filename="src/example.txt", filename2="src/example2.txt", filename3="src/example3.txt"):
+def summary(filename):
 
-    return (f"File: {filename} Sum: {tes(filename)}")
+    return ()
 
 def main():
     print(summary())
