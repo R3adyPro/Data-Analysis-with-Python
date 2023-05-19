@@ -12,14 +12,14 @@ def file_count(filename):
         splitted_line = line.split()
         words += len(splitted_line)
         characters += sum(len(word) for word in line)
-
+    f.close()
     return (lines, words, characters)
 
 def main():
     files = sys.argv[1:]
     for file in files:
         result = file_count(file)
-        print(result)
+        print(f"{result[0]}\t{result[1]}\t{result[2]}\t{file}")
     pass
 
 if __name__ == "__main__":
