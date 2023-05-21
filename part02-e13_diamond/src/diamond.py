@@ -3,9 +3,11 @@
 import numpy as np
 
 def diamond(n):
-    return np.array([])
-
+    dia = np.array([])
+    print(np.eye(6, n+2, 2, dtype=int))
+    return dia
 def main():
+    print(diamond(3))
     pass
 
 if __name__ == "__main__":
