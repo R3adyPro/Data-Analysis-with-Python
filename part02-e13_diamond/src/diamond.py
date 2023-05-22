@@ -3,11 +3,16 @@
 import numpy as np
 
 def diamond(n):
-    dia = np.array([])
-    print(np.eye(6, n+2, 2, dtype=int))
-    return dia
+    a = np.eye(n, dtype=int)
+    b = a[::-1]
+    c = b.T[:n-1].T
+    d = np.concatenate((c, a), axis=1)
+    e = d[::-1]
+    f = e[1:]
+    full = np.concatenate((d,f))
+    return full
 def main():
-    print(diamond(3))
+    print(diamond(10))
     pass
 
 if __name__ == "__main__":
